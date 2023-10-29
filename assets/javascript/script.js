@@ -153,19 +153,24 @@ function checkTime17() {
 }
 checkTime17()
 
+
+
+const userInput = $('.description')
+
 // Sets local storage for saving 9am description
 $("#9am").find(".saveBtn").on("click", function() {
-  let inputValue = $(".description").val();
+  let inputValue = $(userInput).val();
   localStorage.setItem("9am", JSON.stringify(inputValue));
-  getDescription();
+  
 });
 
 // Gets local storage for 9am description
-function getDescription() {
+function getAm9Description() {
   let storedValue = JSON.parse(localStorage.getItem("9am"));
   let displayEl = $("#9am").find(".description");
-  $(storedValue).appendTo(displayEl);
-
+  $(displayEl).val(storedValue);
 }
+
+getAm9Description();
 
 })
