@@ -36,9 +36,12 @@ const userInput = $('.description')
 
 $(document).ready(function() {
 
+
 // Sets the current date and adds it to the header.
 let date = today.format("dddd, MMMM D, YYYY");
 currentDay.append(date)
+
+
 
 
 // Sets class according to current time
@@ -154,12 +157,15 @@ checkTime17()
 $("#9am").find(".saveBtn").on("click", function() {
   let inputValue = $(".description").val();
   localStorage.setItem("9am", JSON.stringify(inputValue));
+  getDescription();
 });
 
 // Gets local storage for 9am description
 function getDescription() {
   let storedValue = JSON.parse(localStorage.getItem("9am"));
-}
+  let displayEl = $("#9am").find(".description");
+  $(storedValue).appendTo(displayEl);
 
+}
 
 })
