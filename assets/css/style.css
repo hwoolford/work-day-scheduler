@@ -62,9 +62,9 @@ textarea {
   font-size: 20px;
 }
 
-/* .alert {
-  display: none;
-} */
+hr {
+  border-bottom: 8px solid black;
+}
 
 .alert:not( .show) {
   visibility: hidden;
