@@ -142,11 +142,20 @@ function checkTime17() {
 checkTime17()
 
 
+// Removes the class to make the alert fadeout.
+const removeShowClass = () => {
+  setTimeout(function() {
+    jQuery('#alert').removeClass('show')
+  }, 2000)
+}
 
-// Sets local storage for saving 9am description
+// Sets local storage for saving 9am description and shows alert that event has been saved.
 $("#9am").find(".saveBtn").on("click", function() {
   let userInput = $(this).siblings(".description").val();
   localStorage.setItem("9am", JSON.stringify(userInput));
+  
+  $(".alert").addClass("show")
+  removeShowClass();
 });
 
 // Gets local storage for 9am description
@@ -157,10 +166,13 @@ function getAm9Description() {
 }
 getAm9Description();
 
-// Sets local storage for saving 10am description
+// Sets local storage for saving 10am description and shows alert that event has been saved.
 $("#10am").find(".saveBtn").on("click", function() {
   let userInput = $(this).siblings(".description").val();
   localStorage.setItem("10am", JSON.stringify(userInput));
+
+  $(".alert").addClass("show")
+  removeShowClass();
 });
 
 // Gets local storage for 10am description
@@ -171,10 +183,13 @@ function getAm10Description() {
 }
 getAm10Description();
 
-// Sets local storage for saving 11am description
+// Sets local storage for saving 11am description and shows alert that event has been saved.
 $("#11am").find(".saveBtn").on("click", function() {
   let userInput = $(this).siblings(".description").val();
   localStorage.setItem("11am", JSON.stringify(userInput));
+
+  $(".alert").addClass("show")
+  removeShowClass();
 });
 
 // Gets local storage for 11am description
@@ -185,10 +200,13 @@ function getAm11Description() {
 }
 getAm11Description();
 
-// Sets local storage for saving 12pm description
+// Sets local storage for saving 12pm description and shows alert that event has been saved.
 $("#12pm").find(".saveBtn").on("click", function() {
   let userInput = $(this).siblings(".description").val();
   localStorage.setItem("12pm", JSON.stringify(userInput));
+
+  $(".alert").addClass("show")
+  removeShowClass();
 });
 
 // Gets local storage for 12pm description
@@ -199,10 +217,13 @@ function getPm12Description() {
 }
 getPm12Description();
 
-// Sets local storage for saving 1pm description
+// Sets local storage for saving 1pm description and shows alert that event has been saved.
 $("#1pm").find(".saveBtn").on("click", function() {
   let userInput = $(this).siblings(".description").val();
   localStorage.setItem("1pm", JSON.stringify(userInput));
+
+  $(".alert").addClass("show")
+  removeShowClass();
 });
 
 // Gets local storage for 1pm description
@@ -213,10 +234,13 @@ function getPm1Description() {
 }
 getPm1Description();
 
-// Sets local storage for saving 2pm description
+// Sets local storage for saving 2pm description and shows alert that event has been saved.
 $("#2pm").find(".saveBtn").on("click", function() {
   let userInput = $(this).siblings(".description").val();
   localStorage.setItem("2pm", JSON.stringify(userInput));
+
+  $(".alert").addClass("show")
+  removeShowClass();
 });
 
 // Gets local storage for 2pm description
@@ -227,10 +251,13 @@ function getPm2Description() {
 }
 getPm2Description();
 
-// Sets local storage for saving 3pm description
+// Sets local storage for saving 3pm description and shows alert that event has been saved.
 $("#3pm").find(".saveBtn").on("click", function() {
   let userInput = $(this).siblings(".description").val();
   localStorage.setItem("3pm", JSON.stringify(userInput));
+
+  $(".alert").addClass("show")
+  removeShowClass();
 });
 
 // Gets local storage for 3pm description
@@ -241,10 +268,13 @@ function getPm3Description() {
 }
 getPm3Description();
 
-// Sets local storage for saving 4pm description
+// Sets local storage for saving 4pm description and shows alert that event has been saved.
 $("#4pm").find(".saveBtn").on("click", function() {
   let userInput = $(this).siblings(".description").val();
   localStorage.setItem("4pm", JSON.stringify(userInput));
+
+  $(".alert").addClass("show")
+  removeShowClass();
 });
 
 // Gets local storage for 4pm description
@@ -255,10 +285,13 @@ function getPm4Description() {
 }
 getPm4Description();
 
-// Sets local storage for saving 5pm description
+// Sets local storage for saving 5pm description and shows alert that event has been saved.
 $("#5pm").find(".saveBtn").on("click", function() {
   let userInput = $(this).siblings(".description").val();
   localStorage.setItem("5pm", JSON.stringify(userInput));
+
+  $(".alert").addClass("show")
+  removeShowClass();
 });
 
 // Gets local storage for 5pm description

@@ -57,3 +57,19 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.saved {
+  font-size: 20px;
+}
+
+/* .alert {
+  display: none;
+} */
+
+.alert:not( .show) {
+  visibility: hidden;
+}
+
+.alert .show {
+  visibility: visible;
+}
