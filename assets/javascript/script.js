@@ -1,4 +1,3 @@
-
 // Global variables
 const today = dayjs();
 let todayCl = today.clone()
@@ -12,6 +11,7 @@ const pm14 = $('#2pm');
 const pm15 = $('#3pm');
 const pm16 = $('#4pm');
 const pm17 = $('#5pm');
+const userInput = $('.description')
 
 
 
@@ -22,7 +22,9 @@ $(document).ready(function() {
 let date = today.format("dddd, MMMM D, YYYY");
 currentDay.append(date)
 
-// Sets class according to current time
+
+
+// Sets class for #9am according to current time
 function checkTime9() {
   let now = todayCl.set("hour", 9)
     if (now < todayCl) {
@@ -35,6 +37,7 @@ function checkTime9() {
 }
 checkTime9()
 
+// Sets class for #10am according to current time
 function checkTime10() {
   let now = todayCl.set("hour", 10)
     if (now < todayCl) {
@@ -47,6 +50,7 @@ function checkTime10() {
 }
 checkTime10()
 
+// Sets class for #11am according to current time
 function checkTime11() {
   let now = todayCl.set("hour", 11)
     if (now < todayCl) {
@@ -59,6 +63,7 @@ function checkTime11() {
 }
 checkTime11()
 
+// Sets class for #12pm according to current time
 function checkTime12() {
   let now = todayCl.set("hour", 12)
     if (now < todayCl) {
@@ -71,6 +76,7 @@ function checkTime12() {
 }
 checkTime12()
 
+// Sets class for #1pm according to current time
 function checkTime13() {
   let now = todayCl.set("hour", 13)
     if (now < todayCl) {
@@ -83,6 +89,7 @@ function checkTime13() {
 }
 checkTime13()
 
+// Sets class for #2pm according to current time
 function checkTime14() {
   let now = todayCl.set("hour", 14)
     if (now < todayCl) {
@@ -95,6 +102,7 @@ function checkTime14() {
 }
 checkTime14()
 
+// Sets class for #3pm according to current time
 function checkTime15() {
   let now = todayCl.set("hour", 15)
     if (now < todayCl) {
@@ -107,6 +115,7 @@ function checkTime15() {
 }
 checkTime15()
 
+// Sets class for #4pm according to current time
 function checkTime16() {
   let now = todayCl.set("hour", 16)
     if (now < todayCl) {
@@ -119,6 +128,7 @@ function checkTime16() {
 }
 checkTime16()
 
+// Sets class for #5pm according to current time
 function checkTime17() {
   let now = todayCl.set("hour", 17)
     if (now < todayCl) {
@@ -131,7 +141,7 @@ function checkTime17() {
 }
 checkTime17()
 
-const userInput = $('.description')
+
 
 // Sets local storage for saving 9am description
 $("#9am").find(".saveBtn").on("click", function() {
