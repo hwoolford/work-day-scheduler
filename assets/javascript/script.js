@@ -1,21 +1,3 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
-// $(function () {
-
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-
-// });
 
 // Global variables
 const today = dayjs();
@@ -33,16 +15,12 @@ const pm17 = $('#5pm');
 const userInput = $('.description')
 
 
-
+// Function to wrap all code in so it doesn't run until the browser has loaded
 $(document).ready(function() {
-
 
 // Sets the current date and adds it to the header.
 let date = today.format("dddd, MMMM D, YYYY");
 currentDay.append(date)
-
-
-
 
 // Sets class according to current time
 function checkTime9() {
@@ -154,14 +132,10 @@ function checkTime17() {
 checkTime17()
 
 
-
-const userInput = $('.description')
-
 // Sets local storage for saving 9am description
 $("#9am").find(".saveBtn").on("click", function() {
   let inputValue = $(userInput).val();
   localStorage.setItem("9am", JSON.stringify(inputValue));
-  
 });
 
 // Gets local storage for 9am description
@@ -170,7 +144,20 @@ function getAm9Description() {
   let displayEl = $("#9am").find(".description");
   $(displayEl).val(storedValue);
 }
-
 getAm9Description();
+
+// Sets local storage for saving 10am description
+$("#10am").find(".saveBtn").on("click", function() {
+  let inputValue = $(userInput).val();
+  localStorage.setItem("10am", JSON.stringify(inputValue));
+});
+
+// Gets local storage for 10am description
+function getAm10Description() {
+  let storedValue = JSON.parse(localStorage.getItem("10am"));
+  let displayEl = $("#10am").find(".description");
+  $(displayEl).val(storedValue);
+}
+getAm10Description();
 
 })
