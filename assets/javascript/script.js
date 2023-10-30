@@ -161,4 +161,32 @@ function getAm10Description() {
 }
 getAm10Description();
 
+// Sets local storage for saving 11am description
+$("#11am").find(".saveBtn").on("click", function() {
+  let userInput = $(this).siblings(".description").val();
+  localStorage.setItem("11am", JSON.stringify(userInput));
+});
+
+// Gets local storage for 11am description
+function getAm11Description() {
+  let storedValue = JSON.parse(localStorage.getItem("11am"));
+  let displayEl = $("#11am").find(".description");
+  $(displayEl).val(storedValue);
+}
+getAm11Description();
+
+// Sets local storage for saving 12pm description
+$("#12pm").find(".saveBtn").on("click", function() {
+  let userInput = $(this).siblings(".description").val();
+  localStorage.setItem("12pm", JSON.stringify(userInput));
+});
+
+// Gets local storage for 12pm description
+function getPm12Description() {
+  let storedValue = JSON.parse(localStorage.getItem("12pm"));
+  let displayEl = $("#12pm").find(".description");
+  $(displayEl).val(storedValue);
+}
+getPm12Description();
+
 })
