@@ -189,4 +189,74 @@ function getPm12Description() {
 }
 getPm12Description();
 
+// Sets local storage for saving 1pm description
+$("#1pm").find(".saveBtn").on("click", function() {
+  let userInput = $(this).siblings(".description").val();
+  localStorage.setItem("1pm", JSON.stringify(userInput));
+});
+
+// Gets local storage for 1pm description
+function getPm1Description() {
+  let storedValue = JSON.parse(localStorage.getItem("1pm"));
+  let displayEl = $("#1pm").find(".description");
+  $(displayEl).val(storedValue);
+}
+getPm1Description();
+
+// Sets local storage for saving 2pm description
+$("#2pm").find(".saveBtn").on("click", function() {
+  let userInput = $(this).siblings(".description").val();
+  localStorage.setItem("2pm", JSON.stringify(userInput));
+});
+
+// Gets local storage for 2pm description
+function getPm2Description() {
+  let storedValue = JSON.parse(localStorage.getItem("2pm"));
+  let displayEl = $("#2pm").find(".description");
+  $(displayEl).val(storedValue);
+}
+getPm2Description();
+
+// Sets local storage for saving 3pm description
+$("#3pm").find(".saveBtn").on("click", function() {
+  let userInput = $(this).siblings(".description").val();
+  localStorage.setItem("3pm", JSON.stringify(userInput));
+});
+
+// Gets local storage for 3pm description
+function getPm3Description() {
+  let storedValue = JSON.parse(localStorage.getItem("3pm"));
+  let displayEl = $("#3pm").find(".description");
+  $(displayEl).val(storedValue);
+}
+getPm3Description();
+
+// Sets local storage for saving 4pm description
+$("#4pm").find(".saveBtn").on("click", function() {
+  let userInput = $(this).siblings(".description").val();
+  localStorage.setItem("4pm", JSON.stringify(userInput));
+});
+
+// Gets local storage for 4pm description
+function getPm4Description() {
+  let storedValue = JSON.parse(localStorage.getItem("4pm"));
+  let displayEl = $("#4pm").find(".description");
+  $(displayEl).val(storedValue);
+}
+getPm4Description();
+
+// Sets local storage for saving 5pm description
+$("#5pm").find(".saveBtn").on("click", function() {
+  let userInput = $(this).siblings(".description").val();
+  localStorage.setItem("5pm", JSON.stringify(userInput));
+});
+
+// Gets local storage for 5pm description
+function getPm5Description() {
+  let storedValue = JSON.parse(localStorage.getItem("5pm"));
+  let displayEl = $("#5pm").find(".description");
+  $(displayEl).val(storedValue);
+}
+getPm5Description();
+
 })
