@@ -58,6 +58,10 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+.line {
+  border-bottom: 8px solid black;
+}
+
 .saved {
   font-size: 20px;
 }
