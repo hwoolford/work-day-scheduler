@@ -12,7 +12,7 @@ const pm14 = $('#2pm');
 const pm15 = $('#3pm');
 const pm16 = $('#4pm');
 const pm17 = $('#5pm');
-const userInput = $('.description')
+
 
 
 // Function to wrap all code in so it doesn't run until the browser has loaded
@@ -131,11 +131,12 @@ function checkTime17() {
 }
 checkTime17()
 
+const userInput = $('.description')
 
 // Sets local storage for saving 9am description
 $("#9am").find(".saveBtn").on("click", function() {
-  let inputValue = $(userInput).val();
-  localStorage.setItem("9am", JSON.stringify(inputValue));
+  let userInput = $(this).siblings(".description").val();
+  localStorage.setItem("9am", JSON.stringify(userInput));
 });
 
 // Gets local storage for 9am description
@@ -148,8 +149,8 @@ getAm9Description();
 
 // Sets local storage for saving 10am description
 $("#10am").find(".saveBtn").on("click", function() {
-  let inputValue = $(userInput).val();
-  localStorage.setItem("10am", JSON.stringify(inputValue));
+  let userInput = $(this).siblings(".description").val();
+  localStorage.setItem("10am", JSON.stringify(userInput));
 });
 
 // Gets local storage for 10am description
