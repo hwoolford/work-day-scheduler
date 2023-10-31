@@ -9,7 +9,9 @@ Time blocks colored gray represent a time that has already occured. The red time
 
 
 ## Visuals
+The gif below shows the functionality of the work day scheduler. 
 
+![Work Day Scheduler](./assets/images/work-day-scheduler.gif)
 
 
 
