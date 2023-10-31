@@ -1,7 +1,11 @@
 # Work Day Scheduler
 
 ## Description
+This project involves modifying partial HTML starter code and adding JavaScript, Jquery, and dayjs to bring functionality to the Work Day Scheduler website. The CSS and partial HTML with Bootstrap were provided for the challenge.
 
+The Work Day Scheduler has the current date at the top and includes time blocks from 9am to 5pm for users to type their schedule. After saving the entry, users are presented with a message letting them know the entry has been saved. Uses may then refresh the page or return to the page after closing the browser and their saved events remain.
+
+Time blocks colored gray represent a time that has already occured. The red time block represents the current hour and the green time blocks represent future events.
 
 
 ## Visuals
